@@ -2,8 +2,11 @@
 Author: Andries Smit, Flock of Birds International BV
 
 Type: Widget
+
 Latest Version: 1.0
+
 Package file name: JWPlayer.mpk
+
 Sponsor: http://www.endemol.nl/
 
 ## Description
