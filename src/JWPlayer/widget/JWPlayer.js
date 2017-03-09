@@ -37,7 +37,9 @@ define(["dojo/_base/declare", "mxui/widget/_WidgetBase", "dojo/_base/lang",
             videoUrlAttr: "",
             imageUrlAttr: "",
             videoFallbackUrlAttr: "",
-            // Appearance            
+            mimeType: "",
+            mimeTypeFallback: "",
+            // Appearance
             skin: "glow",
             videoHeight: "270",
             videoWidth: "480",
@@ -163,6 +165,9 @@ define(["dojo/_base/declare", "mxui/widget/_WidgetBase", "dojo/_base/lang",
                     this.playerInstance.mxObjId = this._contextObj.getGuid();
                     dojoStyle.set(this.domNode, "display", "");
                 } else {
+                    if (this.playerInstance) {
+                        this.playerInstance.stop();
+                    }
                     dojoStyle.set(this.domNode, "display", "none");
                 }
             },
@@ -215,9 +220,11 @@ define(["dojo/_base/declare", "mxui/widget/_WidgetBase", "dojo/_base/lang",
                     options = {
                         //file: this._contextObj.get(this.videoUrlAttr), 
                         sources: [{
-                            file: this._contextObj.get(this.videoUrlAttr)
+                            file: this._contextObj.get(this.videoUrlAttr),
+                            type: this.mimeType
                         }, {
-                            file: this._contextObj.get(this.videoFallbackUrlAttr)
+                            file: this._contextObj.get(this.videoFallbackUrlAttr),
+                            type: this.mimeTypeFallback
                         }],
                         preload : this.preload,
                         controls: this.showControls,

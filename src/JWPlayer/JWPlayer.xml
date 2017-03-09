@@ -12,6 +12,11 @@
                 <attributeType name="String" />
             </attributeTypes>
         </property>
+        <property key="mimeType" type="string" required="false">
+            <caption>Mine Type</caption>
+            <category>Video</category>
+            <description>Overwrite the file type detection based on file extension</description>
+        </property>
         <property key="videoFallbackUrlAttr" type="attribute" required="false" >
             <caption>Video Fallback URL</caption>
             <category>Video</category>
@@ -19,6 +24,11 @@
             <attributeTypes>
                 <attributeType name="String" />
             </attributeTypes>
+        </property>
+        <property key="mimeTypeFallback" type="string" required="false">
+            <caption>Mine Type Fallback</caption>
+            <category>Video</category>
+            <description>Overwrite the file type detection based on file extension</description>
         </property>
         <property key="imageUrlAttr" type="attribute" required="false">
             <caption>Image URL</caption>
@@ -31,17 +41,17 @@
         <property key="autoStart" type="boolean" defaultValue="false">
             <caption>Auto start</caption>
             <category>Behaviour</category>
-            <description>Automatically start playing the video on page load</description>            
+            <description>Automatically start playing the video on page load</description>
         </property>
         <property key="loopContent" type="boolean" defaultValue="false">
             <caption>Loop Content</caption>
             <category>Behaviour</category>
-            <description>Whether to loop playback of the playlist or not.</description>            
+            <description>Whether to loop playback of the playlist or not.</description>
         </property>
         <property key="muteOnStart" type="boolean" defaultValue="false">
             <caption>Mute on Start</caption>
             <category>Behaviour</category>
-            <description>Whether to have the sound muted on start-up or not.(not on iOS Android)</description>            
+            <description>Whether to have the sound muted on start-up or not.(not on iOS Android)</description>
         </property>
         <property key="preload" type="enumeration" defaultValue="none">
             <caption>Preload</caption>
@@ -50,14 +60,14 @@
             <enumerationValues>
                 <enumerationValue key="none">None</enumerationValue>
                 <enumerationValue key="auto">Auto</enumerationValue>
-            </enumerationValues>          
+            </enumerationValues>
         </property>
         <property key="videoWidth" type="integer" defaultValue="640">
             <caption>Width</caption>
             <category>Appearance</category>
             <description>Width of the player in pixels</description>
         </property>
-        <property key="videoHeigth" type="integer" defaultValue="360">
+        <property key="videoHeight" type="integer" defaultValue="360">
             <caption>Height</caption>
             <category>Appearance</category>
             <description>Height of the player in pixels. </description>
@@ -65,7 +75,7 @@
         <property key="showControls" type="boolean" defaultValue="true">
             <caption>Show Controls</caption>
             <category>Appearance</category>
-            <description>Whether to display the video controls (control bar, display icons and dock buttons)</description>            
+            <description>Whether to display the video controls (control bar, display icons and dock buttons)</description>
         </property>
         <property key="skin" type="enumeration" defaultValue="glow" required="true">
             <caption>Skin</caption>
@@ -86,23 +96,23 @@
         <property key="licenseKey" type="string" required="false">
             <caption>License Key</caption>
             <category>Settings</category>
-            <description>Key needed to use the commercial features. http://www.jwplayer.com/pricing</description>            
+            <description>Key needed to use the commercial features. http://www.jwplayer.com/pricing</description>
         </property>
         <property key="onEventMF" type="microflow" entityProperty="playerEventEntity" required="false">
             <caption>On Event Microflow</caption>
             <category>Events</category>
-            <description>Microflow to be called when user triggers an event</description>  
-            <returnType type="Void"/>          
-        </property>        
+            <description>Microflow to be called when user triggers an event</description>
+            <returnType type="Void"/>
+        </property>
         <property key="playerEventEntity" type="entity" allowNonPersistableEntities="true" required="false">
             <caption>Event Entity</caption>
             <category>Events</category>
-            <description/>         
-        </property>                
+            <description/>
+        </property>
         <property key="playerEventRel" type="entity" isPath="yes" pathType="reference" allowNonPersistableEntities="true" required="false" entityProperty="playerEventEntity">
             <caption>Event Relation</caption>
             <category>Events</category>
-            <description/>         
+            <description/>
         </property>
         <property key="eventTypeAttr" type="attribute" required="false" entityProperty="playerEventEntity">
             <caption>Event Type</caption>
@@ -123,12 +133,12 @@
         <property key="logoFile" type="image" required="false">
             <caption>Logo</caption>
             <category>Logo</category>
-            <description>Image JPG, PNG or GIF image to be used as watermark.</description>            
+            <description>Image JPG, PNG or GIF image to be used as watermark.</description>
         </property>
         <property key="logoLink" type="string" required="false">
             <caption>Logo Link</caption>
             <category>Logo</category>
-            <description>The HTTP URL which will load when your watermark image is clicked.</description>            
+            <description>The HTTP URL which will load when your watermark image is clicked.</description>
         </property>
         <property key="shareLinkAttr" type="attribute" required="false">
             <caption>Deeplink</caption>
@@ -137,23 +147,23 @@
             <attributeTypes>
                 <attributeType name="String" />
             </attributeTypes>
-        </property>        
+        </property>
         <property key="shareHeading" type="translatableString" required="false">
             <caption>Heading</caption>
             <category>Sharing</category>
             <description>Short, instructive text to display at the top of the sharing screen. The default is Share Video. This is also is displayed as a tooltip for the sharing icon.</description>
             <translations>
                 <translation lang="en_US">Share Video</translation>
-                <translation lang="en_GB">Share Video</translation>                
+                <translation lang="en_GB">Share Video</translation>
                 <translation lang="nl_BE">Deel Video</translation>
                 <translation lang="nl_NL">Deel Video</translation>
             </translations>
-        </property>        
+        </property>
         <property key="shareSites" type="string" required="false" defaultValue="facebook, twitter, email, tumblr, googleplus, reddit, linkedin">
             <caption>Sites</caption>
             <category>Sharing</category>
             <description>Sites comma seperated. facebook, twitter, email, tumblr, googleplus, reddit, linkedin</description>
-        </property> 
+        </property>
     </properties>
 </widget>
 
