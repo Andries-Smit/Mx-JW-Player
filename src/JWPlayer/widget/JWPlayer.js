@@ -5,11 +5,11 @@
  ========================
  
  @file      : JWPlayer.js
- @version   : 1.0.0
+ @version   : 1.1.0
  @author    : Andries Smit
- @date      : 2015-12-24
+ @date      : 2017-04-06
  @copyright : Flock of Birds International BV
- @license   : MIT
+ @license   : Apache License, Version 2.0
  
  Documentation
  ========================
@@ -71,6 +71,9 @@ define(["dojo/_base/declare", "mxui/widget/_WidgetBase", "dojo/_base/lang",
             playerInstance: null,
             _contextObj: null,
             mapLogoPosition: [],
+            // force loading to wait for jwlibs to load async
+            autoLoad: false,
+
             // dojo.declare.constructor is called to construct the widget instance. Implement to initialize non-primitive properties.
             constructor: function () {
                 this._handles = [];
@@ -96,6 +99,7 @@ define(["dojo/_base/declare", "mxui/widget/_WidgetBase", "dojo/_base/lang",
                         this.playerInstance.key = this.licenseKey;
                         this._setupEvents();
                         window.jwplayer = jwplayerLicensed; // need to register to global space. else Flash is failing....
+                        this.set("loaded", true);
                     }));
                 } else {
                     require(["JWPlayer/lib/free/jwplayer"], dojoLang.hitch(this, function (jwplayerFree) {
@@ -103,6 +107,7 @@ define(["dojo/_base/declare", "mxui/widget/_WidgetBase", "dojo/_base/lang",
                         this.playerInstance = jwplayerFree(playNode);
                         this._setupEvents();
                         window.jwplayer = jwplayerFree; // need to register to global space. else Flash is failing....
+                        this.set("loaded", true);
                     }));
                 }
             },
