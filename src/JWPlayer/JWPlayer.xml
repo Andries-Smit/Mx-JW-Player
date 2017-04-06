@@ -7,7 +7,7 @@
         <property key="videoUrlAttr" type="attribute" required="true">
             <caption>Video URL</caption>
             <category>Video</category>
-            <description>Attribute that contains URL to a single video file.</description>
+            <description>Attribute that contains URL to a single video file</description>
             <attributeTypes>
                 <attributeType name="String" />
             </attributeTypes>
@@ -46,17 +46,17 @@
         <property key="loopContent" type="boolean" defaultValue="false">
             <caption>Loop Content</caption>
             <category>Behaviour</category>
-            <description>Whether to loop playback of the playlist or not.</description>
+            <description>Whether to loop playback of the playlist or not</description>
         </property>
         <property key="muteOnStart" type="boolean" defaultValue="false">
             <caption>Mute on Start</caption>
             <category>Behaviour</category>
-            <description>Whether to have the sound muted on start-up or not.(not on iOS Android)</description>
+            <description>Whether to have the sound muted on start-up or not (not on iOS Android)</description>
         </property>
         <property key="preload" type="enumeration" defaultValue="none">
             <caption>Preload</caption>
             <category>Behaviour</category>
-            <description>Allows to fetch media information prior to playback.(Mobile browsers never pre-fetch.)</description>  
+            <description>Allows to fetch media information prior to playback (Mobile browsers never pre-fetch.)</description>  
             <enumerationValues>
                 <enumerationValue key="none">None</enumerationValue>
                 <enumerationValue key="auto">Auto</enumerationValue>
@@ -70,7 +70,7 @@
         <property key="videoHeight" type="integer" defaultValue="360">
             <caption>Height</caption>
             <category>Appearance</category>
-            <description>Height of the player in pixels. </description>
+            <description>Height of the player in pixels. At 40px will display as audio only mode</description>
         </property>
         <property key="showControls" type="boolean" defaultValue="true">
             <caption>Show Controls</caption>
@@ -129,16 +129,16 @@
             <attributeTypes>
                 <attributeType name="Float" />
             </attributeTypes>
-        </property>        
+        </property>
         <property key="logoFile" type="image" required="false">
             <caption>Logo</caption>
             <category>Logo</category>
-            <description>Image JPG, PNG or GIF image to be used as watermark.</description>
+            <description>Image JPG, PNG or GIF image to be used as watermark</description>
         </property>
         <property key="logoLink" type="string" required="false">
             <caption>Logo Link</caption>
             <category>Logo</category>
-            <description>The HTTP URL which will load when your watermark image is clicked.</description>
+            <description>The HTTP URL which will load when your watermark image is clicked</description>
         </property>
         <property key="shareLinkAttr" type="attribute" required="false">
             <caption>Deeplink</caption>
@@ -166,4 +166,3 @@
         </property>
     </properties>
 </widget>
-
