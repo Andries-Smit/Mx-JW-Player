@@ -1,10 +1,10 @@
 {
   "name": "JWPlayer",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "JW Player",
   "copyright": "Flock of Birds International BV",
   "private": true,
-  "license" : "Apache License, Version 2.0", 
+  "license": "Apache License, Version 2.0",
   "dependencies": {},
   "devDependencies": {
     "grunt": "0.4.5",
