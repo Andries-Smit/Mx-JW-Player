@@ -93,7 +93,7 @@ define(["dojo/_base/declare", "mxui/widget/_WidgetBase", "dojo/_base/lang",
 
                 var playNode = mxui.dom.create("div", {id: this.id + "_player"}); // need child element else the jw player replace domNode element
                 if (this.licenseKey !== "") {
-                    require(["JWPlayer/lib/licensed/jwplayer"], dojoLang.hitch(this, function (jwplayerLicensed) {
+                    dojoDynamicRequire(["JWPlayer/lib/licensed/jwplayer"], dojoLang.hitch(this, function (jwplayerLicensed) {
                         this.domNode.appendChild(playNode);
                         this.playerInstance = jwplayerLicensed(playNode);
                         this.playerInstance.key = this.licenseKey;
@@ -102,7 +102,7 @@ define(["dojo/_base/declare", "mxui/widget/_WidgetBase", "dojo/_base/lang",
                         this.set("loaded", true);
                     }));
                 } else {
-                    require(["JWPlayer/lib/free/jwplayer"], dojoLang.hitch(this, function (jwplayerFree) {
+                    dojoDynamicRequire(["JWPlayer/lib/free/jwplayer"], dojoLang.hitch(this, function (jwplayerFree) {
                         this.domNode.appendChild(playNode);
                         this.playerInstance = jwplayerFree(playNode);
                         this._setupEvents();
@@ -206,9 +206,7 @@ define(["dojo/_base/declare", "mxui/widget/_WidgetBase", "dojo/_base/lang",
                         actionname: this.onEventMF,
                         guids: [eventObj.getGuid()]
                     },
-                    store: {
-                        caller: this.mxform
-                    },
+                    origin: this.mxform,
                     callback: function () {
                         logger.debug(self.id + ".executeEventMf successfully");
                     },

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <widget id="JWPlayer.widget.JWPlayer" needsEntityContext="true" xmlns="http://www.mendix.com/widget/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../../xsd/widget.xsd">
-    <name>JWPlayer</name>
+    <name>JW Player</name>
     <description>JW Player</description>
     <icon>iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAEMElEQVRIx5XV3a8dZRUG8N9aM2efVmo5rTQWv6JRIyKgBILhuoC1RhQ/SA0Yk8ZL77jwb9BEo/HSC2M0wYRqoomSFpoQJQZFEdAYMFGDGPSC9hz7wek5Z+ZdXszedLe9QFcys/fM3vM863me9b4T/odq7lEIcodKXZGZdqpkhVEom/abOScN3yHuSHlPvBH4truYwKOnsIL9OE0NZBBVIkqrEAeol0P8fuRIvwAqR5AL2KRqOlaVIZtqjVvxteSGxlOMDzX1cqogkxiLL6RYpX7V6f/TT+B3YXvBFSUaEUSETWFsnbiumf0wuRFD8vmSUtwf5AWn2x7v7JrzXySV/C1tajk8jqPYCM5UiPeEvDaoUfaD3mjlgZjAd0xWCXFbam8LbdxlrQbnjoS8Ha+U+lOpiaAcsuN4bjlQo+uOFc80Ow+TBzr9Tq/bneLwPLBAN1fbk7tZcdErOt19gaY9X/q/lMwc3avJTEPrDTckXw/WQne4aZ9rmlK3BIfmnXdLM1BozWC3t38I983vPxm2hSEybUYJbfLz43gLXosp8o8wKD5RagVtruCyKk2Ie6m1UtshnyCEbFmqylYbbSR1b7wuffrMKfxPx4SbC/+XarjgfE8cC6HES4PZc4Ne6SvJa8IFM9e+n/hoaRdH4/r84U3edH2KG5cAlxUkubXH2qeS982D//WK8+fP2ieMknqi7D2U+luo3cUp8qk5wIw4uvC9TcfWcvdsnA714CKQUqcGM/u8mqH0pW7v9A8MtrObcB4mDs8Bbmrq1rzU/OPUHtw5v3GOvTcHH55fnymejrnMcFKmOEEd7XRfwj9SHKcOzh+4I7kN1ZQyfjfF5pKC1VH7SvGuuXe/6/QvdXopau5h/DHE7pjk/WYwbFH7l0BGRPLoYDjRtHcszc97Qzy4CKV4uhk3m7FnnAgaz8zHYkz1/WZEl0sEi/X1s1UHzxJrl/CiTzGbZ3SxqSdrntS0O9AHjza+F2r9rOt/vuatUZ5b4DasFH8Ljo/WD8alHXFRDV2pf3by2Tl3W/zYp5MbOFY+Fiv+Hqf9udbs2+wmgpqfflC8mrzb1QSLP/6h7Px7kv/m8XWCcii27YrRYJdrYpc9I/UidSdmxV9DfKumV07QZnPMhfU5nbqT09eo8NPlhVI1s1mdnZaqMQrtG41nixcaX97SNkahkU30VyjQONeMJwajZqjp3XL1qlQ+ibOmnWK2xhhYp7Jo1AfI54PZkv9JPcL++/kXVoXHlhUsE1xUZkpG+OzGWd36IIOskEIfcXlTrdDkTwZnjFbzyoguuwqd8JgwVnkk9hqzN1Qpg9K0843FQhvnU/gi9cs0tRBOXD0Bb1Sju71mxx43Ky/8OMRnMExD4qGS3wzVh2GYQE/9fwTlbuZW0T5Y6kfFTcG3t+z96mh1Z5f16P3iyq3cfwFkNMi8cbpPLAAAAABJRU5ErkJggg==</icon>
     <properties>
@@ -127,7 +127,7 @@
             <category>Events</category>
             <description/>
             <attributeTypes>
-                <attributeType name="Float" />
+                <attributeType name="Decimal" />
             </attributeTypes>
         </property>
         <property key="logoFile" type="image" required="false">
