@@ -22,11 +22,6 @@ The most-used and fastest loading video player on the web, our signature product
 * Some formats are not natively supported by the OS or browser. 
 * http://support.jwplayer.com/customer/portal/articles/1403635-media-format-reference
 
-## Dependencies
-
-* Mendix 6 or 7 Environment.
-* Fallback for some media formats is FLASH.
-
 ## Configuration
 
 * Download the Widget from App Store
@@ -75,3 +70,18 @@ https://github.com/Andries-Smit/Mx-JW-Player
 ## Bugs, issue or suggestions
 Please let me know when there are any issues or suggestions at the GitHub issue tracker:
 https://github.com/Andries-Smit/Mx-JW-Player/issues
+
+## Phonegap/Cordova configuration
+
+If your are developing a Hybrid Mobile App, please add these line through your Sprint in Mobile App -> Custom Phonegap/Cordova configuration These lines are required to allow the access to Mp4 extensions.
+
+```xml
+<allow-navigation href="*://*.mp4" />
+```
+
+## Limitations
+
+File hosted on a Mendix Server cannot be played in Safari browser.
+
+It requires HTTP range request which is not support by the Mendix server.
+https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/CreatingVideoforSafarioniPhone/CreatingVideoforSafarioniPhone.html#//apple_ref/doc/uid/TP40006514-SW6
