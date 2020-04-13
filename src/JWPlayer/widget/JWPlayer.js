@@ -5,9 +5,9 @@
  ========================
  
  @file      : JWPlayer.js
- @version   : 1.1.0
+ @version   : 1.2.0
  @author    : Andries Smit
- @date      : 2017-04-06
+ @date      : 2020-04-13
  @copyright : Flock of Birds International BV
  @license   : Apache License, Version 2.0
  
